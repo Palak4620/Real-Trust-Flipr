@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose= require('mongoose');
 const connectDB = require('./config/db');
 const cors = require('cors');
 
@@ -9,8 +10,15 @@ const path = require('path');
 
 connectDB();
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["http://real-trust-flipr.vercelapp"],
+    method: ["POST", "GET"],
+    credentials: true  
+  }
+));
 app.use(express.json());
+mongoose.connect('mongodb+srv://palak_jaiswal:Palak0608>@cluster0.oumg4.mongodb.net/flipr?retryWrites=true&w=majority&appName=Cluster0');
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
