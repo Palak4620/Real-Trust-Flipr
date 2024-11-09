@@ -12,7 +12,7 @@ connectDB();
 
 // CORS configuration
 app.use(cors({
-  origin: ["http://real-trust-flipr.vercel.app"],
+  origin: ["http://real-trust-flipr.vercel.app", "https://real-trust-flipr.onrender.com"],
   methods: ["POST", "GET"],
   credentials: true  
 }));
