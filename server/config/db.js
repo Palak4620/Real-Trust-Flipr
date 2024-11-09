@@ -7,11 +7,17 @@ const connectDB = async () => {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
-        console.log('MongoDB connected');
+        console.log('MongoDB connected successfully');
     } catch (error) {
-        console.error(error.message);
+        console.error('MongoDB connection error:', error.message);
+        console.error('Stack Trace:', error.stack);
         process.exit(1);
     }
 };
+
+// Optional: Log database connection status on disconnect
+mongoose.connection.on('disconnected', () => {
+    console.log('MongoDB disconnected');
+});
 
 module.exports = connectDB;
