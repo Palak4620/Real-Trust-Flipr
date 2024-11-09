@@ -6,7 +6,7 @@ const Newsletter = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        axios.post('http://localhost:5000/api/subscriptions', { email })
+        axios.post('https://real-trust-flipr.onrender.com/api/subscriptions', { email })
             .then(response => {
                 alert('Subscribed!');
                 setEmail(''); 
