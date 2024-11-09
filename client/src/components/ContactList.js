@@ -6,7 +6,7 @@ const ContactList = () => {
     const [contacts, setContacts] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/contact')
+        axios.get('https://real-trust-flipr.onrender.com/api/contact')
             .then(response => setContacts(response.data))
             .catch(error => console.error(error));
     }, []);

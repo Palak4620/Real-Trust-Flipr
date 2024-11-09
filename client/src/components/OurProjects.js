@@ -6,7 +6,7 @@ const OurProjects = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/projects')
+        axios.get('https://real-trust-flipr.onrender.com/api/projects')
             .then(response => setProjects(response.data))
             .catch(error => console.error(error));
     }, []);
@@ -18,7 +18,7 @@ const OurProjects = () => {
             <div className="projects-grid">
                 {projects.map(project => (
                     <div key={project._id} className="project-card">
-                        <img src={`http://localhost:5000/${project.image}`} alt={project.name} />
+                        <img src={`https://real-trust-flipr-frontend.onrender.com/${project.image}`} alt={project.name} />
                         <div className="card-content">
                             <h3>{project.name}</h3>
                             <p>{project.description}</p>
