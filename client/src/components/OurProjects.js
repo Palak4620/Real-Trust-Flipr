@@ -6,7 +6,7 @@ const OurProjects = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/projects')
+        axios.get('https://real-trust-flipr.onrender.com/api/projects')
             .then(response => setProjects(response.data))
             .catch(error => console.error(error));
     }, []);
