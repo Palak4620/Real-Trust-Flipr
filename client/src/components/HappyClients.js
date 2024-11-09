@@ -6,7 +6,7 @@ const HappyClients = () => {
     const [clients, setClients] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/clients')
+        axios.get('https://real-trust-flipr.onrender.com/api/clients')
             .then(response => setClients(response.data))
             .catch(error => console.error(error));
     }, []);
