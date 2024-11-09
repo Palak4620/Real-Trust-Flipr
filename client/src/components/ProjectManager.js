@@ -73,7 +73,7 @@ const ProjectManager = () => {
                     <div key={proj._id} className='projectList'>
                         <h4>{proj.name}</h4>
                         <p>{proj.description}</p>
-                        {proj.image && <img src={`http://localhost:5000/${proj.image}`} alt={proj.name} width="100" />}
+                        {proj.image && (<img src={`https://real-trust-flipr.onrender.com/uploads/${proj.image}`} alt={proj.name} width="100" />)}
                     </div>
                 ))}
             </div>
